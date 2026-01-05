@@ -5,7 +5,6 @@ LibreWorlds.WorldRuntime is the authoritative execution layer of the LibreWorlds
 
 It consumes world commands produced upstream (SDK → Adapter → Queue) and applies them deterministically to a concrete world engine implementation. This project is responsible for when and how world state changes occur, but not for producing those changes.
 
-In short:
 If something changes in the world, it happens here.
 
 Responsibilities
@@ -127,15 +126,15 @@ The runtime does not know how the engine renders — only what to apply.
 
 Design Principles
 
-Single Authority: Only the runtime mutates world state
+Single Authority — Only the runtime mutates world state
 
-No Hidden Side Effects: Commands execute explicitly
+No Hidden Side Effects — Commands execute explicitly
 
-Engine Agnostic: Runtime does not depend on rendering tech
+Engine Agnostic — Runtime does not depend on rendering tech
 
-Deterministic Execution: Same commands → same world state
+Deterministic Execution — Same commands → same world state
 
-Clear Boundaries: Each layer has one job
+Clear Boundaries — Each layer has one job
 
 Intended Use
 
@@ -158,3 +157,9 @@ Clean separation from queue and adapter layers
 Builds successfully against LibreWorlds.WorldQueue
 
 Ready for engine integration
+
+Philosophy
+
+The runtime does not guess.
+The runtime does not simulate.
+The runtime executes what actually happened.

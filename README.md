@@ -1,4 +1,3 @@
-```markdown
 # LibreWorlds.WorldRuntime
 
 ## Overview
@@ -129,4 +128,3 @@ This project is used to:
 > The runtime does not guess.  
 > The runtime does not simulate.  
 > The runtime executes what actually happened.
-```

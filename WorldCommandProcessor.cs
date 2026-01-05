@@ -1,27 +1,47 @@
+using LibreWorlds.WorldQueue.Commands;
 using LibreWorlds.WorldQueue.Interfaces;
-using LibreWorlds.WorldQueue.Queue;
 
-namespace LibreWorlds.WorldRuntime
+namespace LibreWorlds.WorldRuntime;
+
+public sealed class WorldCommandProcessor
 {
-    public sealed class WorldCommandProcessor
+    private readonly IWorldEngine _engine;
+
+    public WorldCommandProcessor(IWorldEngine engine)
     {
-        private readonly IWorldCommandQueue _queue;
-        private readonly IWorldEngine _engine;
+        _engine = engine;
+    }
 
-        public WorldCommandProcessor(
-            IWorldCommandQueue queue,
-            IWorldEngine engine)
+    public void Process(IWorldCommand command)
+    {
+        switch (command)
         {
-            _queue = queue;
-            _engine = engine;
-        }
+            case AddObjectCommand add:
+                _engine.AddObject(
+                    add.ObjectId,
+                    add.ModelName,
+                    add.ModelBytes,
+                    add.Position,
+                    add.Rotation
+                );
+                break;
 
-        public void ProcessNext()
-        {
-            if (_queue.TryDequeue(out var command))
-            {
-                command.ExecuteOn(_engine);
-            }
+            case UpdateObjectTransformCommand update:
+                _engine.UpdateObjectTransform(
+                    update.ObjectId,
+                    update.Position,
+                    update.Rotation
+                );
+                break;
+
+            case RemoveObjectCommand remove:
+                _engine.RemoveObject(remove.ObjectId);
+                break;
+
+            default:
+                throw new InvalidOperationException(
+                    $"Unhandled world command type: {command.GetType().Name}"
+                );
         }
     }
 }

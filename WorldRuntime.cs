@@ -1,22 +1,25 @@
 using LibreWorlds.WorldQueue.Interfaces;
-using LibreWorlds.WorldQueue.Queue;
 
-namespace LibreWorlds.WorldRuntime
+namespace LibreWorlds.WorldRuntime;
+
+public sealed class WorldRuntime
 {
-    public sealed class WorldRuntime
+    private readonly IWorldCommandQueue _queue;
+    private readonly WorldCommandProcessor _processor;
+
+    public WorldRuntime(
+        IWorldCommandQueue queue,
+        WorldCommandProcessor processor)
     {
-        private readonly WorldCommandProcessor _processor;
+        _queue = queue;
+        _processor = processor;
+    }
 
-        public WorldRuntime(
-            IWorldCommandQueue queue,
-            IWorldEngine engine)
+    public void Tick()
+    {
+        while (_queue.TryDequeue(out var cmd))
         {
-            _processor = new WorldCommandProcessor(queue, engine);
-        }
-
-        public void Tick()
-        {
-            _processor.ProcessNext();
+            _processor.Process(cmd);
         }
     }
 }

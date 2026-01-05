@@ -41,7 +41,7 @@ The WorldRuntime is responsible for:
 
 ## High-Level Architecture
 
-```
+
 LibreWorlds SDK
         ↓
 WorldAdapter
@@ -51,7 +51,7 @@ WorldCommandQueue
 WorldRuntime
         ↓
 IWorldEngine (Godot / Native / Headless)
-```
+
 
 Data flows strictly downward.  
 Authority flows strictly downward.
@@ -129,5 +129,4 @@ This project is used to:
 > The runtime does not guess.  
 > The runtime does not simulate.  
 > The runtime executes what actually happened.
-```
 ```

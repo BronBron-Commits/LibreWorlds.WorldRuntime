@@ -1,0 +1,15 @@
+C:\Projects\LibreWorlds.WorldRuntime\bin\x64\Debug\net10.0\LibreWorlds.WorldRuntime.deps.json
+C:\Projects\LibreWorlds.WorldRuntime\bin\x64\Debug\net10.0\LibreWorlds.WorldRuntime.dll
+C:\Projects\LibreWorlds.WorldRuntime\bin\x64\Debug\net10.0\LibreWorlds.WorldRuntime.pdb
+C:\Projects\LibreWorlds.WorldRuntime\bin\x64\Debug\net10.0\LibreWorlds.WorldQueue.dll
+C:\Projects\LibreWorlds.WorldRuntime\bin\x64\Debug\net10.0\LibreWorlds.WorldQueue.pdb
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.csproj.AssemblyReference.cache
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.AssemblyInfoInputs.cache
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.AssemblyInfo.cs
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.csproj.CoreCompileInputs.cache
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWor.ED9359FA.Up2Date
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.dll
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\refint\LibreWorlds.WorldRuntime.dll
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\LibreWorlds.WorldRuntime.pdb
+C:\Projects\LibreWorlds.WorldRuntime\obj\x64\Debug\net10.0\ref\LibreWorlds.WorldRuntime.dll

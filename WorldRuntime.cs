@@ -1,4 +1,5 @@
 using LibreWorlds.WorldQueue.Interfaces;
+using LibreWorlds.WorldQueue.Queue;
 
 namespace LibreWorlds.WorldRuntime
 {
@@ -15,7 +16,7 @@ namespace LibreWorlds.WorldRuntime
 
         public void Tick()
         {
-            _processor.Process();
+            _processor.ProcessNext();
         }
     }
 }

@@ -1,4 +1,5 @@
 using LibreWorlds.WorldQueue.Interfaces;
+using LibreWorlds.WorldQueue.Queue;
 
 namespace LibreWorlds.WorldRuntime
 {
@@ -15,9 +16,9 @@ namespace LibreWorlds.WorldRuntime
             _engine = engine;
         }
 
-        public void Process()
+        public void ProcessNext()
         {
-            while (_queue.TryDequeue(out var command))
+            if (_queue.TryDequeue(out var command))
             {
                 command.ExecuteOn(_engine);
             }
